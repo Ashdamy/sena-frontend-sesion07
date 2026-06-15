@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor{
+    display: grid;
+    height: 500px;
+    width: 350px;
+    border: 2px solid black;
+    margin: 50px auto auto;
+    padding: 5px;
+    position: relative;
+    animation: opacidad 1s ease;
+}
+
+.precio{
+    font-size: 20px;
+}
+
+.color{
+    background-color: blue;
+    height: 300px;
+}
+
+.badge{
+    position: absolute;
+    top: 10px;
+    color: blue;
+    background-color: whitesmoke;
+    margin: 10px;
+    
+}
+
+.tooltip{
+    visibility: hidden;
+    position: absolute;
+    top: 32px;
+    right: 10px;
+}
+
+.boton:hover .tooltip{
+    visibility: visible;
+}
+
+.boton{
+    position: relative;
+}
+
+button{
+    width: 200px;
+    height: 25px;
+    display: block;
+    margin: 0 auto;
+    background-color:blue ;
+    color: whitesmoke;
+}
+
+@keyframes opacidad{
+    from{opacity: 0;
+    transform: translateY(30px);}
+
+    to{opacity: 1;
+    transform: translateY(0);}
+}
+
+@keyframes girar{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+
+.spinner{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 32px;
+    height: 32px;
+    border: 3px solid #e2e8f0;
+    border-top-color: #0891b2;
+    border-radius: 50%;
+    animation: girar 700ms linear infinite;
+}
+
+.oculto{
+    display: none;
+}
